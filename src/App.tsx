@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { HashRouter as Router, Routes,Route, Link, Outlet } from 'react-router-dom'
+import { Routes,Route, Link, Outlet } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement, incrementByAmount } from './store/features/counterSlice';
+import WrapRoutes from '@/routes';
 
 function DemoTest() {
   const count = useSelector((state: any) => state.counter.value)
@@ -31,7 +32,7 @@ function UserInfo() {
 function NavLink() {
   return (
     <nav className='flex list-none'>
-      <li className='mx-4'> <Link to="/">home</Link> </li>
+      <li className='mx-4'> <Link to="/home">home</Link> </li>
       <li className='mx-4'> <Link to="/about">about</Link> </li>
       <li className='mx-4'> <Link to="/user">user</Link> </li>
       <li className='mx-4'> <Link to="/router">router</Link> </li>
@@ -105,18 +106,17 @@ function RouterPage() {
 function App() {
   return (
     <div className="App">
-      <Router>
-        <NavLink />
-        <Routes>
-          <Route path='/' element={<Home />}></Route> 
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/user' element={<Users />}></Route>
-          <Route path='/router' element={<RouterPage />}>
-            <Route path='/router/test1' element={<h3>test1</h3>}></Route>
-            <Route path='/router/test2' element={<h3>test2</h3>}></Route>
-          </Route>
-        </Routes>
-      </Router>
+      <NavLink />
+      <WrapRoutes />
+      {/* <Routes>
+        <Route path='/' element={<Home />}></Route> 
+        <Route path='/about' element={<About />}></Route>
+        <Route path='/user' element={<Users />}></Route>
+        <Route path='/router' element={<RouterPage />}>
+          <Route path='/router/test1' element={<h3>test1</h3>}></Route>
+          <Route path='/router/test2' element={<h3>test2</h3>}></Route>
+        </Route>
+      </Routes> */}
     </div>
   )
 }
