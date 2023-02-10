@@ -1,14 +1,14 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export interface UserSlice {
   value: number;
 }
 
 export const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState: {
-    username: "lxl",
-    password: "123456",
+    username: 'lxl',
+    password: '123456',
   },
   reducers: {},
 });

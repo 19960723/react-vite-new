@@ -1,6 +1,14 @@
-import React, { memo } from "react"
+import React, { memo } from 'react';
+import { useSelector } from 'react-redux';
 const User = memo(() => {
-  return (<>users</>)
-})
+  const { username, password } = useSelector((state: any) => state.user);
+  return (
+    <>
+      <p>
+        username: {username} password: {password}
+      </p>
+    </>
+  );
+});
 
-export default User
+export default User;

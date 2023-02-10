@@ -4,6 +4,7 @@ redux
 
 router
   - react-router-dom
+  -  ~ react-router-config
 
 styles
   - tailwindcss
@@ -11,11 +12,19 @@ styles
   - autoprefixer
 
 Eslint
-
+  - eslint
+  - eslint-plugin-react
+  - eslint-define-config
+  - eslint-plugin-html
+  - eslint-plugin-jest
+  - @typescript-eslint/eslint-plugin
+  - @typescript-eslint/parser
 Prettier
-
-Jest
-
+  - prettier 
+  - eslint-config-prettier
+  - eslint-plugin-prettier 
+单元测试
+   - jest eslint-plugin-jest ts-jest @types/jest
 
 选择
   - 语言 i18n
@@ -27,3 +36,18 @@ Jest
   - uuid
   - hls.js
   - DPlayer
+
+
+
+
+
+hooks
+  - ahooks
+
+  - useState  
+  - useEffect 
+  - useRef 
+  - useMemo useCallback
+
+  - useRoutes
+  - useDispatch  useSelector
