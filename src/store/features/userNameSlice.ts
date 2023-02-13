@@ -9,6 +9,7 @@ export const userSlice = createSlice({
   initialState: {
     username: 'lxl',
     password: '123456',
+    token: '',
   },
   reducers: {},
 });

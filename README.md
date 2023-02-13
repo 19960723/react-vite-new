@@ -1,3 +1,12 @@
+axios
+mock
+  - mock
+  - vite-plugin-mock
+
+qs
+ - qs
+ - @types/qs
+
 redux
   - @reduxjs/toolkit 
   - react-redux
@@ -37,10 +46,6 @@ Prettier
   - hls.js
   - DPlayer
 
-
-
-
-
 hooks
   - ahooks
 
@@ -51,3 +56,5 @@ hooks
 
   - useRoutes
   - useDispatch  useSelector
+
+lowcode-engine 低代码
